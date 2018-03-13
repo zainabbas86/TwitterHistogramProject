@@ -5,7 +5,7 @@ class HistogramControllerTest extends WebTestCase
 {
     public function createApplication()
     {
-        $app = require getenv('KERNEL_DIR') . '/app.php';
+        $app = require getenv('KERNEL_DIR') . '/src/app.php';
         $app['session.test'] = true;
 
         return $app;
@@ -14,7 +14,7 @@ class HistogramControllerTest extends WebTestCase
     /**
      * @dataProvider positiveDataForHist
      */
-    public function testHistPositiv($username)
+    public function testHistPositive($username)
     {
         $client = $this->createClient();
         $client->request('GET', '/histogram/' . $username);
@@ -34,8 +34,8 @@ class HistogramControllerTest extends WebTestCase
     public function positiveDataForHist()
     {
         return [
-            ['letch1k'],
-            ['barackobama']
+            ['zain'],
+            ['testUser']
         ];
     }
 
@@ -59,8 +59,8 @@ class HistogramControllerTest extends WebTestCase
     public function negativeDataForHist()
     {
         return [
-            ['letch1!'],
-            ['barackobamaisthebestemperorever']
+            ['zain1!'],
+            ['testUserHasfailed']
         ];
     }
 }

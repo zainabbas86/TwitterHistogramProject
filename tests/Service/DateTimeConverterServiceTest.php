@@ -9,7 +9,7 @@ class DateTimeConverterServiceTest extends \PHPUnit_Framework_TestCase
      */
     public function testConvert($params, $expected)
     {
-        $service = new App\Service\DateTimeConverterService();
+        $service = new App\twitterApp\Services\DateTimeConverterService();
 
         $convert = function ($time, $offset) {
             return $this->convert($time, $offset);

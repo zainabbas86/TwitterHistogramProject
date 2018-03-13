@@ -4,7 +4,7 @@ use Silex\WebTestCase;
 class MainControllerTest extends WebTestCase
 {
     public function createApplication() {
-        $app = require getenv('KERNEL_DIR') . '/app.php';
+        $app = require getenv('KERNEL_DIR') . '/src/app.php';
         $app['session.test'] = true;
         return $app;
     }

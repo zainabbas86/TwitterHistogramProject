@@ -8,7 +8,7 @@ class HelloControllerTest extends WebTestCase
 {
     public function createApplication()
     {
-        $app = require getenv('KERNEL_DIR') . '/app.php';
+        $app = require getenv('KERNEL_DIR') . '/src/app.php';
         $app['session.test'] = true;
 
         return $app;
@@ -33,8 +33,8 @@ class HelloControllerTest extends WebTestCase
     public function positiveDataForHello()
     {
         return [
-            ['letch1k'],
-            ['barackobama']
+            ['zain'],
+            ['testUser']
         ];
     }
 
@@ -57,8 +57,8 @@ class HelloControllerTest extends WebTestCase
     public function negativeDataForHello()
     {
         return [
-            ['letch1!'],
-            ['barackobamaisthebestemperorever']
+            ['zain1!'],
+            ['testUserHasFailed']
         ];
     }
 }
