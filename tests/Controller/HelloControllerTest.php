@@ -6,9 +6,10 @@ use Silex\WebTestCase;
  */
 class HelloControllerTest extends WebTestCase
 {
+
     public function createApplication()
     {
-        $app = require getenv('KERNEL_DIR') . '/src/app.php';
+        $app = require __DIR__.'/../../src/appTest.php';
         $app['session.test'] = true;
 
         return $app;
@@ -17,7 +18,7 @@ class HelloControllerTest extends WebTestCase
     /**
      * @dataProvider positiveDataForHello
      */
-    public function testHelloPositiv($expected)
+    public function testHelloPositive($expected)
     {
         $client = $this->createClient();
         $client->request('GET', '/hello/' . $expected);

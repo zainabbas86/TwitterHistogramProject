@@ -15,4 +15,9 @@
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
+
+    <php>
+        <server name="APP_DIR" value="c:/wamp64/www/symfonyProjects/TwitterHistogramProject/src" />
+        <env name="env" value="test" />
+    </php>
 </phpunit>

@@ -5,7 +5,7 @@ class HistogramControllerTest extends WebTestCase
 {
     public function createApplication()
     {
-        $app = require getenv('KERNEL_DIR') . '/src/app.php';
+        $app = require __DIR__.'/../../src/appTest.php';
         $app['session.test'] = true;
 
         return $app;
